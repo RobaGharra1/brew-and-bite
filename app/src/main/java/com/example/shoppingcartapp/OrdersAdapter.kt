@@ -29,11 +29,14 @@ object OrderStatus {
         "delivered" to "Delivered"
     )
 
-    fun label(s: String) = labels[s] ?: s.replaceFirstChar { it.uppercase() }
-    fun index(s: String) = steps.indexOf(s).coerceAtLeast(0)
+    // بيوحّد الكتابة: On the way / on-the-way / ON_THE_WAY ← on_the_way
+    fun normalize(s: String): String =
+        s.trim().lowercase().replace(" ", "_").replace("-", "_")
 
-    // (خلفية الشارة، لون النص)
-    fun colors(s: String): Pair<Int, Int> = when (s) {
+    fun label(s: String) = labels[normalize(s)] ?: s
+    fun index(s: String) = steps.indexOf(normalize(s)).coerceAtLeast(0)
+
+    fun colors(s: String): Pair<Int, Int> = when (normalize(s)) {
         "preparing" -> Color.parseColor("#F6E1B5") to Color.parseColor("#7A5A00")
         "on_the_way" -> Color.parseColor("#D9E8F5") to Color.parseColor("#1F4E79")
         "delivered" -> Color.parseColor("#D8EBD3") to Color.parseColor("#2E6B2E")

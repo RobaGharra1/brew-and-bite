@@ -44,7 +44,7 @@ class OrderDetailActivity : AppCompatActivity() {
     }
 
     private fun render(doc: DocumentSnapshot) {
-        val status = doc.getString("status") ?: "placed"
+        val status = OrderStatus.normalize(doc.getString("status") ?: "placed")
         val deliveryType = doc.getString("deliveryType") ?: "Standard"
 
         findViewById<TextView>(R.id.statusLabel).text = OrderStatus.label(status)
