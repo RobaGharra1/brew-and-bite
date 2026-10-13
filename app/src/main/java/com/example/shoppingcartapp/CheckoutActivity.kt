@@ -38,6 +38,7 @@ class CheckoutActivity : AppCompatActivity() {
     private val items = mutableListOf<CartItem>()
     private val addresses = mutableListOf<SavedAddress>()
     private var selectedAddressId: String? = null
+    private var lastOrderId: String? = null
 
     private lateinit var uid: String
     private var userName = ""
@@ -111,6 +112,7 @@ class CheckoutActivity : AppCompatActivity() {
         tabCash.setOnClickListener { selectPayment(false) }
         findViewById<TextView>(R.id.addAddressButton).setOnClickListener { showAddAddressDialog() }
         findViewById<MaterialButton>(R.id.backHomeButton).setOnClickListener { goHome() }
+        findViewById<MaterialButton>(R.id.trackOrderButton).setOnClickListener { goTrack() }
         actionButton.setOnClickListener {
             if (step == 1) goToPayment() else placeOrder()
         }
@@ -375,7 +377,7 @@ class CheckoutActivity : AppCompatActivity() {
     private fun styleStep(dot: TextView, label: TextView, active: Boolean) {
         dot.setBackgroundResource(if (active) R.drawable.step_active else R.drawable.step_inactive)
         dot.setTextColor(if (active) Color.WHITE else Color.parseColor("#8A7968"))
-        label.setTextColor(Color.parseColor(if (active) "#3E2A1C" else "#8A7968"))
+        label.setTextColor(Color.parseColor(if (active) "#5A3E2B" else "#8A7968"))
     }
 
     private fun selectDelivery(express: Boolean) {
@@ -587,7 +589,9 @@ class CheckoutActivity : AppCompatActivity() {
 
         val cartRef = db.collection("users").document(uid).collection("cart")
         val batch = db.batch()
-        batch.set(db.collection("orders").document(), order)
+        val orderRef = db.collection("orders").document()
+        lastOrderId = orderRef.id
+        batch.set(orderRef, order)
         items.forEach { batch.delete(cartRef.document(it.id)) }
 
         batch.commit()
@@ -612,4 +616,16 @@ class CheckoutActivity : AppCompatActivity() {
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)
     }
+    private fun goTrack() {
+        val id = lastOrderId
+        if (id == null) { goHome(); return }
+        val home = Intent(this, HomeActivity::class.java)
+            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        val detail = Intent(this, OrderDetailActivity::class.java)
+            .putExtra("orderId", id)
+        // الهوم بالأساس، وفوقه شاشة التتبع، فالرجوع بيودّي للهوم
+        startActivities(arrayOf(home, detail))
+    }
+
+
 }

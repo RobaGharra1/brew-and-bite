@@ -99,7 +99,7 @@ class OrderDetailActivity : AppCompatActivity() {
                 background.mutate().setTint(
                     Color.parseColor(if (done) "#EADBC8" else "#6F4E37")
                 )
-                setTextColor(Color.parseColor(if (done) "#3E2A1C" else "#EADBC8"))
+                setTextColor(Color.parseColor(if (done) "#5A3E2B" else "#EADBC8"))
                 layoutParams = LinearLayout.LayoutParams((30 * d).toInt(), (30 * d).toInt())
             })
             col.addView(TextView(this).apply {

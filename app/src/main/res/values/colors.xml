@@ -14,7 +14,7 @@
 
     <!-- App Colors (Coffee Theme) -->
     <color name="primary">#6F4E37</color>
-    <color name="primary_dark">#3E2A1C</color>
+    <color name="primary_dark">#5A3E2B</color>
     <color name="text_primary">#2B1D14</color>
     <color name="text_secondary">#8A7968</color>
     <color name="bg">#FAF6F1</color>
