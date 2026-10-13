@@ -66,34 +66,34 @@ Payment is a demo: only the card brand and last 4 digits are stored, never the f
 ## Screenshots
 
 ### Welcome
-![Welcome](screenshots/welcome.png)
+![Welcome](welcome.png)
 
 ### Sign Up
-![Sign Up](screenshots/signUp.png)
+![Sign Up](signUp.png)
 
 ### Login
-![Login](screenshots/login.png)
+![Login](login.png)
 
 ### Home
-![Home](screenshots/home.png)
+![Home](home.png)
 
 ### Details
-![Details](screenshots/details.png)
+![Details](details.png)
 
 ### Checkout
-![Checkout](screenshots/checkout.png)
+![Checkout](checkout.png)
 
 ### Cart
-![Cart](screenshots/cart.png)
+![Cart](cart.png)
 
 ### Orders
-![Orders](screenshots/orders.png)
+![Orders](orders.png)
 
 ### Tracking
-![Tracking](screenshots/tracking.png)
+![Tracking](tracking.png)
 
 ### Profile
-![Profile](screenshots/profile.png)
+![Profile](profile.png)
 
 
 ## Run locally
