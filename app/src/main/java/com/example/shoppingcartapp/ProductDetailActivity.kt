@@ -122,7 +122,7 @@ class ProductDetailActivity : AppCompatActivity() {
         val titleView = TextView(this).apply {
             text = title
             textSize = 16f
-            setTextColor(Color.parseColor("#3E2A1C"))
+            setTextColor(Color.parseColor("#5A3E2B"))
             setTypeface(typeface, Typeface.BOLD)
             setPadding(0, (18 * d).toInt(), 0, (8 * d).toInt())
         }
