@@ -24,19 +24,18 @@ A coffee shop ordering app for Android, built with Kotlin and Firebase.
 
 ## Screenshots
 
-<p align="center">
-  <img src="screenshots/welcome.png" width="200" alt="Welcome">
-  <img src="screenshots/login.png" width="200" alt="Login">
-  <img src="screenshots/home.png" width="200" alt="Home">
-  <img src="screenshots/details.png" width="200" alt="Product details">
-</p>
-
-<p align="center">
-  <img src="screenshots/cart.png" width="200" alt="Cart">
-  <img src="screenshots/checkout.png" width="200" alt="Checkout">
-  <img src="screenshots/orders.png" width="200" alt="Orders">
-  <img src="screenshots/tracking.png" width="200" alt="Order tracking">
-</p>
+<table align="center">
+  <tr>
+    <td align="center"><img src="screenshots/welcome.png" width="220"><br><sub>Welcome</sub></td>
+    <td align="center"><img src="screenshots/home.png" width="220"><br><sub>Menu</sub></td>
+    <td align="center"><img src="screenshots/details.png" width="220"><br><sub>Customize drink</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="screenshots/cart.png" width="220"><br><sub>Cart</sub></td>
+    <td align="center"><img src="screenshots/checkout.png" width="220"><br><sub>Checkout</sub></td>
+    <td align="center"><img src="screenshots/tracking.png" width="220"><br><sub>Order tracking</sub></td>
+  </tr>
+</table>
 
 ## Run Locally
 
