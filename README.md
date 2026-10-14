@@ -24,35 +24,19 @@ A coffee shop ordering app for Android, built with Kotlin and Firebase.
 
 ## Screenshots
 
-### Welcome
-![Welcome](welcome.png)
+<p align="center">
+  <img src="screenshots/welcome.png" width="200" alt="Welcome">
+  <img src="screenshots/login.png" width="200" alt="Login">
+  <img src="screenshots/home.png" width="200" alt="Home">
+  <img src="screenshots/details.png" width="200" alt="Product details">
+</p>
 
-### Sign Up
-![Sign Up](signUp.png)
-
-### Login
-![Login](login.png)
-
-### Home
-![Home](home.png)
-
-### Details
-![Details](details.png)
-
-### Checkout
-![Checkout](checkout.png)
-
-### Cart
-![Cart](cart.png)
-
-### Orders
-![Orders](orders.png)
-
-### Tracking
-![Tracking](tracking.png)
-
-### Profile
-![Profile](profile.png)
+<p align="center">
+  <img src="screenshots/cart.png" width="200" alt="Cart">
+  <img src="screenshots/checkout.png" width="200" alt="Checkout">
+  <img src="screenshots/orders.png" width="200" alt="Orders">
+  <img src="screenshots/tracking.png" width="200" alt="Order tracking">
+</p>
 
 ## Run Locally
 
