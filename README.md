@@ -4,7 +4,6 @@
 ![Android](https://img.shields.io/badge/Android-Min%20SDK%2024-3DDC84?logo=android&logoColor=white)
 ![Firebase](https://img.shields.io/badge/Firebase-Auth%20%7C%20Firestore-FFCA28?logo=firebase&logoColor=black)
 ![Material 3](https://img.shields.io/badge/UI-Material%203-6750A4)
-
 A coffee shop ordering app for Android, built with Kotlin and Firebase.
 
 ## Features
